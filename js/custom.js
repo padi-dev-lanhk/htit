@@ -1,20 +1,130 @@
-const tabs = document.querySelectorAll('[data-tab-target]')
-const tabContents = document.querySelectorAll('[data-tab-content]')
+// Tab switching functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.js-tab-btn');
+    const tabContents = document.querySelectorAll('.js-tab-content');
 
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const target = document.querySelector(tab.dataset.tabTarget)
-    tabContents.forEach(tabContent => {
-      tabContent.classList.remove('active')
-    })
-    tabs.forEach(tab => {
-      tab.classList.remove('active')
-    })
-    tab.classList.add('active')
-    target.classList.add('active')
-  })
-})
+    tabButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const tabId = button.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and contents
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.style.display = 'none');
+            
+            // Add active class to clicked button and show corresponding content
+            button.classList.add('active');
+            const activeContent = document.querySelector(`.js-tab-content[data-content="${tabId}"]`);
+            if (activeContent) {
+                activeContent.style.display = 'block';
+            }
+        });
+    });
 
+    // Set initial active tab
+    const firstTab = document.querySelector('.js-tab-btn.active');
+    if (firstTab) {
+        const tabId = firstTab.getAttribute('data-tab');
+        const activeContent = document.querySelector(`.js-tab-content[data-content="${tabId}"]`);
+        if (activeContent) {
+            activeContent.style.display = 'block';
+        }
+    }
+});
+// Director tabs functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebarItems = document.querySelectorAll('.about-director__sidebar-item');
+    const infoItems = document.querySelectorAll('.about-director__info-item');
+
+    // Set initial state
+    infoItems.forEach((item, index) => {
+        if (index === 0) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+            item.style.display = 'none';
+        }
+    });
+
+    sidebarItems.forEach((item) => {
+        item.addEventListener('click', () => {
+            // Remove active class from all sidebar items
+            sidebarItems.forEach(sItem => sItem.classList.remove('active'));
+            
+            // Add active class to clicked item
+            item.classList.add('active');
+            
+            // Get the corresponding tab content
+            const tabId = item.getAttribute('data-tab');
+            
+            // Hide all info items
+            infoItems.forEach(info => {
+                info.classList.remove('active');
+                info.style.display = 'none';
+            });
+            
+            // Show the selected info item
+            const selectedInfo = document.querySelector(`.about-director__info-item[data-content="${tabId}"]`);
+            if (selectedInfo) {
+                selectedInfo.classList.add('active');
+            }
+        });
+    });
+});
+
+const $navContent = $('.js-slider-content');
+// $navSlider.slick({
+//   slidesToShow: 2,
+//   slidesToScroll: 1,
+//   arrows: false,
+//   dots: false,
+//   centerMode: true,
+//   variableWidth: true,
+//   infinite: true,
+//   focusOnSelect: true,
+//   cssEase: 'linear',
+//   touchMove: true,
+//   asNavFor: '.js-slider-content',
+//   responsive: [
+//     {
+//       breakpoint: 767,
+//       settings: {
+//         slidesToShow: 2,
+//         centerMode: true,
+//         variableWidth: true,
+//         spaceBetween: 0
+//       }
+//     }
+//   ]
+// });
+
+$navContent.slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  dots: false,
+  centerMode: false,
+  variableWidth: false,
+  infinite: true,
+  adaptiveHeight: true,
+  focusOnSelect: false,
+  cssEase: 'linear',
+  touchMove: true,
+  fade: false,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        centerMode: false,
+        variableWidth: false,
+        spaceBetween: 0
+      }
+    }
+  ]
+});
+
+$navContent.slick('setPosition');
 // hover change
 $('.list-item-case .item-case:first-child').addClass('active');
 

@@ -272,6 +272,12 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.our-about-company__bottom-item:nth-child(2n) {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
 .our-about-company__bottom-item:nth-child(2n)::before {
   top: 200px;
 }
@@ -405,6 +411,14 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+@media (max-width: 768px) {
+  .our-about-company .about-director__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .our-about-company .about-director__sidebar {
   width: 281px;
@@ -1170,6 +1184,225 @@
   background: #e7cf7f;
 }
 
+@media (max-width: 768px) {
+  .about-kv__title {
+    font-size: 54px;
+    line-height: 60px;
+  }
+  .c-breadcrum {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px 0;
+  }
+  .our-about-company__header {
+    width: 100%;
+    position: absolute;
+    top: 160px;
+    left: 27px;
+    margin-left: 0;
+    z-index: 2;
+  }
+  .our-about-company__top {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+  .our-about-company__content {
+    padding-left: 0;
+    padding-top: 180px;
+  }
+  .our-about-company__top-title {
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 50px;
+  }
+  .our-about-company__content-title {
+    font-size: 35px;
+    line-height: 48px;
+    margin-bottom: 30px;
+  }
+  .our-about-company__featured {
+    padding: 0 0 50px 0;
+  }
+  .our-about-company__count-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .our-about-company__count {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+  .our-about-company__count-item {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .our-about-company-bottom__inner {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .our-about-company-bottom__left {
+    padding-top: 0;
+  }
+  .our-about-company-bottom__right-list {
+    left: 1.875rem;
+  }
+  .our-about-company .about-director__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .our-about-hp__desc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 20px 0;
+    margin-bottom: 50px;
+  }
+  .our-about-hp__desc .st-title {
+    font-size: 35px;
+    line-height: 48px;
+    margin-bottom: 0;
+  }
+  .our-about-hp__desc .st-title span {
+    font-size: 70px;
+    line-height: 80px;
+  }
+  .our-about-hp__desc-text {
+    width: 100%;
+  }
+  .our-about-hp__image {
+    height: auto;
+  }
+  .our-about-hp__image-img {
+    height: auto;
+    width: 100%;
+    max-width: 370px;
+    margin: 0 auto;
+  }
+  .our-about-hp__image-icon {
+    width: 110px;
+    top: 93px;
+    right: 53px;
+  }
+  .our-about-company__bottom-list {
+    gap: 50px 0;
+  }
+  .our-about-company__bottom-item {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    position: relative;
+    gap: 30px 0;
+  }
+  .our-about-company__bottom-item-content {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 25px;
+    height: auto;
+  }
+  .our-about-company__bottom-item::before {
+    top: 235px !important;
+  }
+  .our-about-company__bottom-list::after {
+    display: none;
+  }
+  .our-about-company__bottom-item::before {
+    display: none;
+  }
+  .our-about-company__bottom-item::after {
+    display: none;
+  }
+  .our-logictic-top__title {
+    font-size: 35px;
+    line-height: 48px;
+  }
+  .our-logictic-top__desc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 20px 0;
+  }
+  .our-logictic-top__text {
+    width: 100%;
+  }
+  .our-logictic-featured__inner {
+    height: 550px;
+  }
+  .our-logictic-featured__title {
+    font-size: 35px;
+    line-height: 48px;
+  }
+  .our-logictic-featured__text {
+    line-height: 32px;
+  }
+  .our-about-company__bottom-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 50px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .our-about-company .about-director__header {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+  .our-about-company .about-director__info-item-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .our-about-company .about-director__info-item-content::before {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 30px;
+    height: 24px;
+    content: "";
+    display: block;
+    background: url(../images/about/img-quote.svg) top left no-repeat;
+    background-size: 30px;
+  }
+}
 @media (max-width: 991px) {
   .our-about-hp {
     padding: 60px 0;

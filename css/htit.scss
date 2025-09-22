@@ -2594,42 +2594,50 @@ div#md-lang ul.dropdown li a { text-decoration: none; padding: 0em 1em; display:
     }
 }
 @media (max-width: 1919px) {
-    .home-banner .md-home-banner .main-banner-content .banner-left{
-        padding-right: 15px;
-    }
-    .sec-blog .md-blog .images-link p{
-        bottom: 7px;
-        line-height: 20px;
-    }
+    
 }
-@media (min-width: 1380px) and (max-width: 1800px) {
-    .home-banner .md-home-banner .main-banner-content .banner-right .avatar{
+@media (min-width: 1280px) and (max-width: 1480px) {
+    header .menu-bar.v1 .menu-bar-content .main-menu ul li a{
+        font-size: 14px;
+    }
+    header .menu-bar.v1 .menu-bar-content .main-menu .social a{
+        width: 190px;
+        height: 54px;
+        font-size: 16px;
+    }
+    header .menu-bar.v1 .menu-bar-content .main-menu ul{
+        border-left: none;
+    }
+    .home-banner .md-home-banner .main-banner-content .banner-title h3{
+        font-size: 70px;
+        line-height: 70px;
+    }
+    .home-banner .md-home-banner .main-banner-content .banner-title .cd-headline{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .section-service .sec-title h3{
+        font-size: 80px;
+        line-height: 80px;
+    }
+    .our-about-hp__desc .st-title span{
+        font-size: 80px;
+        line-height: 80px;
+    }
+    .section-service .list-service{
+        margin-left: 0;
         margin-right: 0;
     }
-    .home-banner .md-home-banner .main-banner-content .banner-right{
-        padding-right: 60px;
+    .section-service .sec-note .right p{
+        font-size: 26px;
+        line-height: 36px;
     }
-    .home-banner .md-home-banner .main-banner-content .banner-right .avatar .tron{
-        width: 160px;
-        top: 8%;
-        left: -20px;
+    .section-localtion.our-about-hp .our-about-hp__desc .our-about-hp__desc-text{
+        font-size: 26px;
+        line-height: 36px;
     }
-    .home-banner .md-home-banner .main-banner-content .banner-right .avatar .vongtron{
-        width: 400px;
-    }
-    .home-banner .md-home-banner .main-banner-content .banner-right .avatar .vongtron .tron8{
-        top: 20%;
-        width: 68px;
-        right: 50px;
-    }
-    .home-banner .md-home-banner .main-banner-content .banner-left{
-        margin-top: -40px;
-    }
-    .lang-vi header .menu-bar.v1 .menu-bar-content .main-menu ul{
-        // gap: 40px;
-    }
-    .lang-ja header .menu-bar.v1 .menu-bar-content .main-menu ul{
-        // gap: 40px;
+    footer .ft-center .right .localtion .phone h4{
+        font-size: 30px;
     }
 }
 

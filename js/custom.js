@@ -97,34 +97,74 @@ const $navContent = $('.js-slider-content');
 //     }
 //   ]
 // });
+  //   centerMode: true,
+  //   variableWidth: true,
+  //   infinite: true,
+  //   focusOnSelect: true,
+  //   cssEase: 'linear',
+  //   touchMove: true,
+  //   asNavFor: '.js-slider-content',
+  //   responsive: [
+  //     {
+  //       breakpoint: 767,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         centerMode: true,
+  //         variableWidth: true,
+  //         spaceBetween: 0
+  //       }
+  //     }
+  //   ]
+  // });
+//   variableWidth: true,
+//   infinite: true,
+//   focusOnSelect: true,
+//   cssEase: 'linear',
+//   touchMove: true,
+//   asNavFor: '.js-slider-content',
+//   responsive: [
+//     {
+//       breakpoint: 767,
+//       settings: {
+//         slidesToShow: 2,
+//         centerMode: true,
+//         variableWidth: true,
+//         spaceBetween: 0
+//       }
+//     }
+//   ]
+// });
 
-$navContent.slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: true,
-  dots: false,
-  centerMode: false,
-  variableWidth: false,
-  infinite: true,
-  adaptiveHeight: true,
-  focusOnSelect: false,
-  cssEase: 'linear',
-  touchMove: true,
-  fade: false,
-  responsive: [
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 1,
-        centerMode: false,
-        variableWidth: false,
-        spaceBetween: 0
+// Guard Slick initialization to avoid errors when Slick isn't available on this page
+if ($navContent.length && typeof $navContent.slick === 'function') {
+  $navContent.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    centerMode: false,
+    variableWidth: false,
+    infinite: true,
+    adaptiveHeight: true,
+    focusOnSelect: false,
+    cssEase: 'linear',
+    touchMove: true,
+    fade: false,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+          variableWidth: false,
+          spaceBetween: 0
+        }
       }
-    }
-  ]
-});
+    ]
+  });
 
-$navContent.slick('setPosition');
+  $navContent.slick('setPosition');
+}
 // hover change
 $('.list-item-case .item-case:first-child').addClass('active');
 
@@ -234,5 +274,34 @@ $(function() { // Dropdown toggle
   if (!$(target).is('#md-lang  .dropdown-toggle') && !$(target).parents().is('#md-lang  .dropdown-toggle')) 
   //{ $('.dropdown').hide(); }
     { $('#md-lang  .dropdown').slideUp(); }
+  });
+});
+
+  // FAQ accordion
+  $(function() {
+  // Hide all contents initially, except those pre-marked as open
+  $('.js-faq-content').each(function() {
+    const $content = $(this);
+    if ($content.hasClass('is-open')) {
+      $content.show();
+    } else {
+      $content.hide();
+    }
+  });
+
+  // Toggle content on header click
+  $(document).on('click', '.js-faq-header', function(e) {
+    e.preventDefault();
+    const $item = $(this).closest('.box-faq__item');
+    const $content = $item.find('.js-faq-content').first();
+    const willOpen = !$content.hasClass('is-open');
+    // Toggle class immediately for instant DOM reflection
+    $content.toggleClass('is-open', willOpen);
+    // Animate accordingly
+    if (willOpen) {
+      $content.stop(true, true).slideDown(200);
+    } else {
+      $content.stop(true, true).slideUp(200);
+    }
   });
 });

@@ -1252,6 +1252,27 @@ $font-family-anek : "Anek Bangla", sans-serif;
             font-size: 16px;
         }
     }
+    .our-service__item {
+        padding: 20px;
+        width: 50%;
+    }
+    .our-service__item-images {
+        width: auto;
+    }
+    .our-service__item-title {
+        font-size: 36px;
+    }
+    .our-service__item:nth-child(3) {
+        border-right: 1px solid #CDD9DE;
+        border-bottom: 1px solid #CDD9DE;
+    }
+    .our-service__item:nth-child(4) {
+        border-right: 0;
+        border-bottom: 1px solid #CDD9DE;
+    }
+    .our-service__item-desc {
+        min-height: 140px;
+    }
 }
 @media (max-width: 768px) {
     .about-kv__title {

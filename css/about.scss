@@ -1719,4 +1719,13 @@ $font-family-anek : "Anek Bangla", sans-serif;
     .our-service-details {
         padding: 50px 0;
     }
+    .our-about-aspiration {
+        height: auto;
+    }
+    .our-about-aspiration__item {
+        width: 100%;
+    }
+    .our-about-aspiration__inner {
+        flex-direction: column;
+    }
 }

@@ -2016,4 +2016,16 @@
   .our-service-details {
     padding: 50px 0;
   }
+  .our-about-aspiration {
+    height: auto;
+  }
+  .our-about-aspiration__item {
+    width: 100%;
+  }
+  .our-about-aspiration__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }

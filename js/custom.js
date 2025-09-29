@@ -282,17 +282,26 @@ $(function() { // Dropdown toggle
   // Hide all contents initially, except those pre-marked as open
   $('.js-faq-content').each(function() {
     const $content = $(this);
-    if ($content.hasClass('is-open')) {
+    const isOpen = $content.hasClass('is-open');
+    const $header = $content.closest('.box-faq__item').find('.js-faq-header').first();
+    if (isOpen) {
+      // $header.addClass('is-open');
+      $content.closest('.box-faq__item').find('.js-faq-header').addClass('is-open');
       $content.show();
     } else {
+      // $header.removeClass('is-open');
+      $content.closest('.box-faq__item').find('.js-faq-header').removeClass('is-open');
       $content.hide();
     }
+    // Reflect initial state on header as well
+    // $header.toggleClass('is-open', isOpen);
   });
 
   // Toggle content on header click
   $(document).on('click', '.js-faq-header', function(e) {
     e.preventDefault();
     const $item = $(this).closest('.box-faq__item');
+    $(this).toggleClass('is-open');
     const $content = $item.find('.js-faq-content').first();
     const willOpen = !$content.hasClass('is-open');
     // Toggle class immediately for instant DOM reflection

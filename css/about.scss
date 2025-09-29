@@ -1309,6 +1309,7 @@ $font-family-anek : "Anek Bangla", sans-serif;
     }
     &__content {
         display: flex;
+        flex-direction: column;
         flex: 1;
     }
     &__item {
@@ -1398,6 +1399,7 @@ $font-family-anek : "Anek Bangla", sans-serif;
     }
     
     .box-faq {
+        margin-bottom: 80px;
         &__item {
             border-top: 1px solid #D1D9DB;
         }
@@ -1473,6 +1475,60 @@ $font-family-anek : "Anek Bangla", sans-serif;
             font-weight: 400;
             line-height: 28px; /* 140% */
             letter-spacing: -0.2px; 
+        }
+    }
+    .our-contact {
+        background: #406AB3;
+        padding: 40px;
+        position: relative;
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            gap: 20px 0;
+            position: relative;
+
+        }
+        &__img {
+            position: absolute;
+            right: -77px;
+            top: -110px;
+        }
+        &__title {
+            color: #FFF;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 32px; /* 106.667% */
+            letter-spacing: -0.64px;
+        }
+        &__group {
+            display: flex;
+            gap: 0;
+        }
+        &__input {
+            height: 56px;
+            line-height: 56px;
+            padding: 0 25px;
+            background-color: #FFF;
+            width: 417px;
+        }
+        &__btn {
+            height: 56px;
+            line-height: 56px;
+            padding: 0 25px;
+            background-color: #FFF;
+            span {
+                color: #B89C17;
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+            svg {
+                
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0 3px;
         }
     }
 }
@@ -1773,5 +1829,20 @@ $font-family-anek : "Anek Bangla", sans-serif;
     }
     .our-about-aspiration__inner {
         flex-direction: column;
+    }
+
+    .our-service-details .box-faq__header h3 {
+        padding-right: 20px;
+    }
+    .our-service-details .our-contact__btn {
+        width: 122px;
+        padding: 0 15px;
+    }
+    .our-service-details .our-contact__input {
+        width: calc(100% - 122px);
+    }
+    // our contact
+    .our-service-details .our-contact__img {
+        display: none;
     }
 }

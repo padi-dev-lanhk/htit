@@ -1546,6 +1546,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1650,6 +1654,9 @@
 .our-service-details .box-details-center__image {
   max-width: 434px;
 }
+.our-service-details .box-faq {
+  margin-bottom: 80px;
+}
 .our-service-details .box-faq__item {
   border-top: 1px solid #D1D9DB;
 }
@@ -1731,7 +1738,69 @@
   line-height: 28px; /* 140% */
   letter-spacing: -0.2px;
 }
-
+.our-service-details .our-contact {
+  background: #406AB3;
+  padding: 40px;
+  position: relative;
+}
+.our-service-details .our-contact__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px 0;
+  position: relative;
+}
+.our-service-details .our-contact__img {
+  position: absolute;
+  right: -77px;
+  top: -110px;
+}
+.our-service-details .our-contact__title {
+  color: #FFF;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 32px; /* 106.667% */
+  letter-spacing: -0.64px;
+}
+.our-service-details .our-contact__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+}
+.our-service-details .our-contact__input {
+  height: 56px;
+  line-height: 56px;
+  padding: 0 25px;
+  background-color: #FFF;
+  width: 417px;
+}
+.our-service-details .our-contact__btn {
+  height: 56px;
+  line-height: 56px;
+  padding: 0 25px;
+  background-color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 3px;
+}
+.our-service-details .our-contact__btn span {
+  color: #B89C17;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
 @media (max-width: 991px) {
   .our-service__top-title {
     font-size: 80px;
@@ -2084,5 +2153,18 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .our-service-details .box-faq__header h3 {
+    padding-right: 20px;
+  }
+  .our-service-details .our-contact__btn {
+    width: 122px;
+    padding: 0 15px;
+  }
+  .our-service-details .our-contact__input {
+    width: calc(100% - 122px);
+  }
+  .our-service-details .our-contact__img {
+    display: none;
   }
 }
